@@ -1,4 +1,3 @@
-import matplotlib
 import requests
 import datetime
 import json
