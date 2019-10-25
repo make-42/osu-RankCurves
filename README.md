@@ -1,2 +1,2 @@
 # osu-RankCurves
-The titles is self explanatory
+The title is self explanatory
