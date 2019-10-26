@@ -8,7 +8,7 @@ epoch = datetime.datetime.utcfromtimestamp(0)
 today = datetime.datetime.today()
 d = today - epoch
 rank = requests.get("https://osu.ppy.sh/api/get_user?k="+key+"&u="+user).json()[0]["pp_rank"]
-curradd = [int(d.days),int(rank)]
+curradd = [int(d.days)+float(),int(rank)]
 print(curradd)
 try:
     a = open("saverank.json","r+")
