@@ -25,6 +25,7 @@ except:
     b = open("saveday.json","r+")
 jsonloads = json.loads(str(a.read()))["rank"]
 try:
+    testop = (int(rank)-jsonloads[len(jsonloads)-1])
     test = 1/(int(rank)-jsonloads[len(jsonloads)-1])
     jsonloads.append(int(rank))
     jsonloadsd = json.loads(str(b.read()))["day"]
@@ -35,7 +36,7 @@ except:
 a.close()
 b.close()
 try:
-    test = 1/(int(rank)-jsonloads[len(jsonloads)-1])
+    test = 1/testop
     os.remove("saverank.json")
     os.remove("saveday.json")
     a = open("saverank.json","w+")
