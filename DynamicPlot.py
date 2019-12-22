@@ -20,6 +20,9 @@ def update(i):
     ab = json.loads(str(a.read()))["rank"]
     b = open("saveday.json","r+")
     bc = json.loads(str(b.read()))["day"]
+    ad = bc[0]
+    for y in range(len(bc)):
+        bc[y] = bc[y]-ad
     print(ab,bc)
     ax.clear()
     ax.plot(bc,ab)
